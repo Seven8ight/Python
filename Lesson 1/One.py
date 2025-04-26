@@ -78,3 +78,5 @@ def average(marks:list[int]) -> float:
     return sum(marks) / len(marks)
 
 # Compute marks for every student and print it out on the terminal
+# *args -> the method can take an unlimited amount of parameters
+# **kargs -> creates a dictionary for you.
