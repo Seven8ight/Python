@@ -34,6 +34,16 @@ class ShoppingCart:
             print(f"{name}: {qty} @ Ksh {price}")
         print(f"\nTotal: Ksh. {attr.calculateTotal():.2f}")
 
+class TaxedCart(ShoppingCart):
+    def __init__(self, tax_rate: float):
+        super().__init__()
+        self.tax_rate = tax_rate
+    
+    def calculate_total(self) -> float:
+        """Override to add tax on the initial total."""
+        initial_total = super().calculate_total()
+        tax = initial_total * self.tax_rate
+        return initial_total + tax
 
 if __name__ == "__main__":
     cart:ShoppingCart = ShoppingCart()
