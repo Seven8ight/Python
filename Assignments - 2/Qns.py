@@ -76,7 +76,7 @@ def additionMultiplier(multiplicand,result):
 
 # -> 6
 
-# string = str(input("Enter a string to reverse: "))
+string = str(input("Enter a string to reverse: "))
 
 def reversal_string_recursion(string:str,position = 0):
     if position == 0 or len(string) == 0:
@@ -86,8 +86,8 @@ def reversal_string_recursion(string:str,position = 0):
     return reversal_string_recursion(string,position - 1)
         
     
-# print(string)
-# reversal_string_recursion(string,len(string))
+print(string)
+reversal_string_recursion(string,len(string))
 
 # -> 7
 
