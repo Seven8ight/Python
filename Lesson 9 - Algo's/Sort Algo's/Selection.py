@@ -17,9 +17,7 @@ def SelectionSort(array):
             if array[min] > array[j]:
                 min = j
 
-        temp:int = array[i]
-        array[i] = array[min]
-        array[min] = temp
+        [array[i],array[min]] = [array[min],array[i]]
     
 
 unsorted_arr = [9,4,8,7,2,4,1]
